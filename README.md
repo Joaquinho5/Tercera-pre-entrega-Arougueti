@@ -1,7 +1,5 @@
 # Tercera-pre-entrega-Arougueti
 
-No estoy seguro de que este vaya a ser el tema de mi proyecto final.
-
 La idea de esta "pagina intermedia" es que sea un lugar donde poder gurdar tus 
 Jugadores favoritos del alavés.
 Tecnicos favoritos del alavés y,
