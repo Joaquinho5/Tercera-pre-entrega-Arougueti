@@ -1,0 +1,33 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+    Jugadores
+{% endblock titulo %}
+
+
+{% block contenido %}
+<h4>Cantidad de Jugadores en la tabla {{ Jugadores|length }}</h4>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre de Jugador</th>
+            <th>posicion</th>
+        </tr>
+    </thead>
+    <tbody>
+{% for c in Jugadores  %}
+        <tr>
+            <td>{{ c.nombre }}</td>
+            <td>{{ c.posicion }}</td>
+        </tr>
+{% endfor %}
+    </tbody>
+</table>
+
+<a class="navbar-brand" href="{% url 'jugador_form2' %}"><h4>Añadir jugador</h4></a> <a class="navbar-brand" href="{% url 'buscarJugador' %}"><h4>Buscar jugador</h4></a>
+
+{% endblock contenido %}
+    
+    

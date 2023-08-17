@@ -1,0 +1,30 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+    Tecnicos
+{% endblock titulo %}
+
+
+{% block contenido %}
+<h4>Cantidad de Tecnicos en la tabla {{ Tecnicos|length }}</h4>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre de Tecnico</th>
+            <th>Estilo</th>
+        </tr>
+    </thead>
+    <tbody>
+{% for c in Tecnicos  %}
+        <tr>
+            <td>{{ c.nombre }}</td>
+            <td>{{ c.estilo }}</td>
+        </tr>
+{% endfor %}
+    </tbody>
+</table>
+
+<a class="navbar-brand" href="{% url 'tecnico_form' %}"><h4>Añadir tecnico</h4></a> <a class="navbar-brand" href="{% url 'buscarTecnico' %}"><h4>Buscar tecnico</h4></a>
+{% endblock contenido %}

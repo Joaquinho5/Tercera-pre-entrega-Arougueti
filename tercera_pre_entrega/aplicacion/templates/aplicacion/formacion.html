@@ -1,0 +1,30 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+    Formaciones
+{% endblock titulo %}
+
+
+{% block contenido %}
+<h4>Cantidad de Formaciones en la tabla {{ Formaciones|length }}</h4>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Formación</th>
+            <th>Tactica</th>
+        </tr>
+    </thead>
+    <tbody>
+{% for c in Formaciones %}
+        <tr>
+            <td>{{ c.formacio }}</td>
+            <td>{{ c.tactica }}</td>
+        </tr>
+{% endfor %}
+    </tbody>
+</table>
+
+<a class="navbar-brand" href="{% url 'formacion_form' %}"><h4>Añadir formacion</h4></a> <a class="navbar-brand" href="{% url 'buscarFormacion' %}"><h4>Buscar formacion</h4></a>
+{% endblock contenido %}
